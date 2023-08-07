@@ -10,6 +10,8 @@ def load_data(uploaded_file):
     if uploaded_file is not None:
         df = pd.read_csv(uploaded_file)
         return df
+    
+st.image('./images/UTS_LOGO.png')
 
 # Upload CSV file for the net income, clinical pay, and profit margin data
 st.subheader('Upload your CSV data file')
@@ -17,7 +19,7 @@ uploaded_file = st.file_uploader("Choose a CSV file", type='csv')
 
 data = load_data(uploaded_file)
 if data is not None:
-    st.image('./images/UTS_Logo.png')
+    
     st.subheader('Admin Dashboard')
 
     fig = px.line(data, x='start_date', y='net_income', title='Weekly Net Income Chart')
