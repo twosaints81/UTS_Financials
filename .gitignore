@@ -1,1 +1,4 @@
 .DS_Store
+.vscode
+employee_profiles.py
+employee_profiles.csv
